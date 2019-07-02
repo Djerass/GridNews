@@ -1,0 +1,245 @@
+/*Variables*/
+:root {
+    --primary-color: #c72727;
+    --secondary-color: #f99500;
+    --light-color: #f3f3f3;
+    --dark-color: #333;
+    --max-width: 1100px;
+}
+
+.category {
+    --sports-color: #f99500;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff;
+}
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    line-height: 1.5;
+    background-color: var(--light-color);
+    font-family: 'Lato', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+ul {
+   list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Staatliches', cursive;
+    margin: 0.5rem 0;
+}
+
+/*Utility*/
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.category {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: .4rem .6rem;
+    font-size: 0.55rem;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.category-sport {background-color: var(--sports-color)}
+.category-ent {background-color: var(--ent-color)}
+.category-tech {background-color: var(--tech-color)}
+
+
+.py-1 { padding: 1rem 0;}
+.py-2 { padding: 2rem 0;}
+
+.bg-primary { background-color: var(--primary-color); color: #fff}
+.bg-dark { background-color: var(--dark-color); color: #fff}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+}
+
+
+/*NAV BAR*/
+#main-nav {
+    background-color: #fff;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+}
+
+
+
+#main-nav .logo {
+   width: 180px;
+}
+
+#main-nav .container {
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    align-items: center;
+    padding: 1rem;
+}
+
+#main-nav .social{
+    justify-self: center;
+}
+
+#main-nav .social i {
+    margin-right: .5rem;
+}
+
+#main-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+#main-nav ul a {
+    padding: .75rem;
+    font-weight: bold;
+}
+
+#main-nav ul a.current {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#main-nav ul a:hover {
+    background-color: #ebebeb;
+    color: var(--dark-color);
+}
+
+/*Show Case*/
+
+#showcase {
+    position: relative;
+    background: #333;
+    color: #fff;
+}
+
+#showcase:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../image_resources/featured.jpg") no-repeat center center/cover;
+    opacity: 0.5;
+}
+
+#showcase .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 50vh;
+}
+
+#showcase .showcase-content {
+    align-self: center;
+    z-index: 1;
+}
+
+#showcase .showcase-content a {
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-top: .5rem;
+}
+
+#showcase .showcase-content a:hover {
+    background-color: darkred;
+}
+
+#main-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+#main-articles .articles-container .card {
+    padding: 1rem;
+    background-color: #fff;
+}
+#main-articles .articles-container .card.bg-dark {background-color: var(--dark-color); color: #fff}
+#main-articles .articles-container .card.bg-primary {background-color: var(--primary-color); color: #fff}
+
+#main-articles .articles-container > *:first-child,
+#main-articles .articles-container > *:last-child
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+#main-articles .articles-container > *:first-child {
+    grid-column: 1 / span 2;
+}
+
+#main-articles .articles-container > *:last-child {
+    grid-column: 2 / span 2;
+}
+
+
+/*FOOTER*/
+
+#main-footer .container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+#main-footer img {
+    width: 150px;
+}
+#main-footer .container > *:last-child {
+    grid-column: 1/span 4;
+    text-align: center;
+}
+
+#main-footer input {
+    width: 90%;
+    margin-bottom: 0.5rem;
+}
+
+#main-footer input.submit {
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+#main-footer .list li {
+    border-bottom: #555 dotted 1px;
+    padding: .5rem 0;
+}
+
+#main-footer .btn.join {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+#main-footer .copy {
+    background-color: #444;
+    font-size: 0.75rem;
+}
