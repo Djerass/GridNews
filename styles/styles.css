@@ -73,7 +73,9 @@ h1,h2,h3,h4,h5 {
 .py-2 { padding: 2rem 0;}
 
 .bg-primary { background-color: var(--primary-color); color: #fff}
+.bg-secondary {background-color: var(--secondary-color); color: #fff}
 .bg-dark { background-color: var(--dark-color); color: #fff}
+
 
 .btn {
     display: inline-block;
@@ -97,7 +99,7 @@ h1,h2,h3,h4,h5 {
 
 #main-nav .container {
     display: grid;
-    grid-template-columns: 6fr 3fr 2fr;
+    grid-template-columns: 6fr 3fr 1fr;
     align-items: center;
     padding: 1rem;
 }
@@ -112,7 +114,7 @@ h1,h2,h3,h4,h5 {
 
 #main-nav ul {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
 }
 
 #main-nav ul a {
@@ -201,13 +203,87 @@ h1,h2,h3,h4,h5 {
 }
 
 
-/*FOOTER*/
+/* ABOUT */
 
+#about .container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 1rem;
+}
+
+#about .container > *:first-child h1 {
+    font-size: 3rem;
+}
+
+#about .container > *:first-child {
+    grid-row: 1 / span 3;
+    background-color: #ffffff;
+    color: var(--dark-color);
+    padding: 1rem;
+}
+
+#about .container .card {
+    background-color: var(--primary-color);
+    padding: 0.75rem;
+    color: #fff;
+}
+#about .container .card a{
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+/*ARTICLE*/
+#article .container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 1rem;
+}
+
+#article .container article {
+    grid-row: 1 / span 4;
+    padding: 1rem;
+    background-color: #FFF;
+}
+
+#article .container article h1 {
+    font-size: 3rem;
+}
+
+#article .container .meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+#article .container .category-list {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+#article .container .category-list li {
+    border-bottom: 1px dotted grey;
+    padding: 0.5rem;
+}
+
+#article .container .card {
+    padding: 1rem;
+}
+#article .container .card .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+    /*FOOTER*/
 #main-footer .container{
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
-
 }
 #main-footer img {
     width: 150px;
