@@ -1,4 +1,4 @@
-"# GridNews" 
+# GridNews"
 
 https://djerass.github.io/GridNews/
 
